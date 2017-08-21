@@ -11,6 +11,8 @@ rvm use 2.4.1 --default
 
 gem install bundler
 
+gem install rails -v 5.1.3 
+
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
