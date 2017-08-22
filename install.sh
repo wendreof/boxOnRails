@@ -2,6 +2,16 @@ echo "Iniciando instalando do ambiente de desenvolvimento Ruby on Rails com RVM"
 echo "*------------UPDATE ------------*"
 sudo apt-get update
 
+echo "*------------ instalando nodejs ------------*"
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+echo "*------------Instalando MySQL ------------*"
+sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
+
+echo "*------------Instalando Git ------------*"
+sudo apt-get install -y git
+
 #echo "--- CONFIGURANDO SENHA PADRÃO DO MYSQL ---"
 #DEFAULTPASS="vagrant"
 #sudo debconf-set-selections <<EOF
@@ -37,12 +47,6 @@ sudo apt-get update
 #echo "--- instalando RAILS 5.1.3 ---"
 #gem install rails -v 5.1.3 
 
-echo "*------------ instalando nodejs ------------*"
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-#echo "--- instalando mysql e phpmyadmin ---"
-#sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev phpmyadmin
 
 
 

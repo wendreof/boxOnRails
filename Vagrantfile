@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
    
   config.vm.network "private_network", ip: "192.168.33.10"
 
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder "projects/", "/var/www", owner: "www-data", group: "www-data", mount_options: ['dmode=777','fmode=666']
 
   config.vm.provider "virtualbox" do |machine|
     machine.memory = 1024
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     machine.name = "box-on-rails"
   end
 
-   config.vm.provision "shell", path: "install.sh", keep_color: true
+   config.vm.provision :shell, path: "install.sh", keep_color: true
    config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
    config.vm.provision :shell, path: "install-ruby.sh", args: "2.3.4", privileged: false
    config.vm.provision :shell, path: "install-ruby.sh", args: "2.4.1 rails haml", privileged: false

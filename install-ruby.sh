@@ -12,6 +12,5 @@ echo "*-------------------INSTALANDO RUBY---------------*"
 
  rvm cleanup all
 
-#sudo apt-get -y upgrade
+sudo apt-get -y upgrade
 
-echo "*------------ Ambiente de Desenvolvimento [Ok]------------*"
