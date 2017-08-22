@@ -14,7 +14,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |machine|
     machine.memory = 1024
     machine.cpus = 1
+    machine.name = "box-on-rails"
   end
 
-   config.vm.provision "shell", path: "install.sh", keep_color: true #setup
+   config.vm.provision "shell", path: "install.sh", keep_color: true
+   config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
+   config.vm.provision :shell, path: "install-ruby.sh", args: "2.3.4", privileged: false
+   config.vm.provision :shell, path: "install-ruby.sh", args: "2.4.1 rails haml", privileged: false
 end
