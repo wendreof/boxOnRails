@@ -1,4 +1,4 @@
-###Pre Requirements
+##Pre Requirements
 
 - VirtualBox https://www.virtualbox.org/
 - Git  http://git-scm.com 
@@ -14,7 +14,7 @@
 - Git 2.7.4
 - Docker 17.06.1-ce
 
-###Step-by-step
+##Step-by-step
 
 1º -> Clone this repostory https://github.com/wendreof/box-on-rails
 
@@ -22,4 +22,12 @@
 
 3º -> vagrant up
 
+After this 'vagrant up' command, Vagrant will be responsible for downloading the operating system (in the Ubuntu Server 64 case), configuring a virtual machine in VirtualBox and later downloading, installing and configuring all the packages in the 'setup.sh' script. ! The first time really is a bit more time consuming).
+
 4º -> vagrant ssh
+
+5º -> run rails new myapp or run rasils new myapp -d mysql
+
+A web server is available at http: //localhost:3000
+
+- Enjoy
