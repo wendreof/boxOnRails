@@ -3,6 +3,17 @@ echo "Iniciando instalando do ambiente de desenvolvimento Ruby on Rails com RVM"
 echo "*------------UPDATE ------------*"
 sudo apt-get update
 
+echo "--- CONFIGURANDO SENHA PADRÃO DO MYSQL ---"
+DEFAULTPASS="root"
+sudo debconf-set-selections <<EOF
+mysql-server	    mysql-server/root_password password $DEFAULTPASS
+mysql-server	    mysql-server/root_password_again password $DEFAULTPASS
+dbconfig-common	dbconfig-common/mysql/app-pass password $DEFAULTPASS
+dbconfig-common	dbconfig-common/mysql/admin-pass password $DEFAULTPASS
+dbconfig-common	dbconfig-common/password-confirm password $DEFAULTPASS
+dbconfig-common	dbconfig-common/app-password-confirm password $DEFAULTPASS
+EOF
+
 echo "*------------ instalando nodejs ------------*"
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -21,23 +32,7 @@ apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 
 
-#echo "--- CONFIGURANDO SENHA PADRÃO DO MYSQL ---"
-#DEFAULTPASS="vagrant"
-#sudo debconf-set-selections <<EOF
-#mysql-server	    mysql-server/root_password password $DEFAULTPASS
-#mysql-server	    mysql-server/root_password_again password $DEFAULTPASS
-#dbconfig-common	dbconfig-common/mysql/app-pass password $DEFAULTPASS
-#dbconfig-common	dbconfig-common/mysql/admin-pass password $DEFAULTPASS
-#dbconfig-common	dbconfig-common/password-confirm password $DEFAULTPASS
-#dbconfig-common	dbconfig-common/app-password-confirm password $DEFAULTPASS
-#phpmyadmin		    phpmyadmin/reconfigure-webserver multiselect apache2
-#phpmyadmin		    phpmyadmin/dbconfig-install boolean true
-#phpmyadmin         phpmyadmin/app-password-confirm password $DEFAULTPASS 
-#phpmyadmin         phpmyadmin/mysql/admin-pass     password $DEFAULTPASS
-#phpmyadmin         phpmyadmin/password-confirm     password $DEFAULTPASS
-#phpmyadmin         phpmyadmin/setup-password       password $DEFAULTPASS
-#phpmyadmin         phpmyadmin/mysql/app-pass       password $DEFAULTPASS
-#EOF
+
 
 #echo "--- instalando pacotes essenciais ---"
 #sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs

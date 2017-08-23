@@ -15,4 +15,6 @@ echo "*-------------------INSTALANDO RUBY---------------*"
 
 echo "*------------------- Finalizando instalação do ambiente (Upgrade)---------------*"
 sudo apt-get -y upgrade
+sudo gem install mysql2
+gem install mysql2
 
