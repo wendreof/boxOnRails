@@ -1,6 +1,5 @@
 *.log
 *.04-cloudimg-console.log
 rails
-projects/*
 *.box
 
