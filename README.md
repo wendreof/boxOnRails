@@ -16,18 +16,21 @@
 
 ##Step-by-step
 
-1º -> Clone this repostory https://github.com/wendreof/box-on-rails
+1º -> git clone https://github.com/wendreof/box-on-rails
 
-2º -> cd box-on-rails/
+2º -> "cd box-on-rails/"
 
-3º -> vagrant up
+3º -> "vagrant up"
 
 After this 'vagrant up' command, Vagrant will be responsible for downloading the operating system configuring a virtual machine in VirtualBox and later downloading, installing and configuring all the packages in the 'setup.sh' script. ! The first time really is a bit more time consuming).
 
-4º -> vagrant ssh
+4º -> "vagrant ssh"
 
-5º -> run rails new myapp or run rasils new myapp -d mysql
+5º -> "cd /var/www"
+
+6º -> run "rails new myapp -d mysql"
 
 A web server is available at http://localhost:3000
 
+(The default password for all services is root).
 - Enjoy

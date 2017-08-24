@@ -1,9 +1,9 @@
-echo "Iniciando instalando do ambiente de desenvolvimento Ruby on Rails com RVM"
+echo "Getting Started Installing from the Ruby on Rails Development Environment with RVM"
 
 echo "*------------UPDATE ------------*"
 sudo apt-get update
 
-echo "--- CONFIGURANDO SENHA PADRÃO DO MYSQL ---"
+echo "--- Configuring MySQL Password---"
 DEFAULTPASS="root"
 sudo debconf-set-selections <<EOF
 mysql-server	    mysql-server/root_password password $DEFAULTPASS
@@ -14,17 +14,17 @@ dbconfig-common	dbconfig-common/password-confirm password $DEFAULTPASS
 dbconfig-common	dbconfig-common/app-password-confirm password $DEFAULTPASS
 EOF
 
-echo "*------------ instalando nodejs ------------*"
+echo "*------------ Installing nodejs ------------*"
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-echo "*------------Instalando MySQL ------------*"
+echo "*------------Installing MySQL ------------*"
 sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
 
-echo "*------------Instalando Git ------------*"
+echo "*------------Installing Git ------------*"
 sudo apt-get install -y git
 
-echo "*------------Instalando Docker ------------*"
+echo "*------------Installing Docker ------------*"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
