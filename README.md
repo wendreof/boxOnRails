@@ -1,10 +1,10 @@
-##Pre Requirements
+*Requirements
 
 - VirtualBox https://www.virtualbox.org/
 - Git  http://git-scm.com 
 - Vagrant http://www.vagrantup.com/
 
-##Includes
+*Includes
 
 - RVM 1.29.2
 - Ruby 2.4.1 and 2.3.4 
@@ -14,23 +14,31 @@
 - Git 2.7.4
 - Docker 17.06.1-ce
 
-##Step-by-step
+*Step-by-step
 
-1º -> git clone https://github.com/wendreof/box-on-rails
+1º -> $ git clone https://github.com/wendreof/box-on-rails
 
-2º -> "cd box-on-rails/"
+2º -> $ cd box-on-rails/
 
-3º -> "vagrant up"
+3º -> $ vagrant up
 
 After this 'vagrant up' command, Vagrant will be responsible for downloading the operating system configuring a virtual machine in VirtualBox and later downloading, installing and configuring all the packages in the 'setup.sh' script. ! The first time really is a bit more time consuming).
 
-4º -> "vagrant ssh"
+4º -> $ vagrant ssh
 
-5º -> "cd /var/www"
+5º -> $ cd /var/www
 
-6º -> run "rails new myapp -d mysql"
+6º -> $ rails new myapp -d mysql
 
 A web server is available at http://localhost:3000
 
 (The default password for all services is root).
-- Enjoy
+
+*Basic Usage
+
+- vagrant up
+- vagrant ssh
+- vagrant halt
+- vagrant reload
+
+*Enjoy
