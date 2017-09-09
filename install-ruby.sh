@@ -13,9 +13,11 @@ echo "*-------------------Installing RUBY---------------*"
 
  rvm cleanup all
 
-echo "*------------------- Installing MySQL Gem---------------*"
+echo "*------------- Installing MySQL Gem---------------*"
 gem install mysql2
 
 echo "*------------------- Upgrade---------------*"
-sudo apt-get -y upgrade
+sudo apt-get -y upgrade && sudp apt-get autoremove && sudo apt-get autoremove
+
+echo "*--------------- Your Environment It Work's ---------------*"
 

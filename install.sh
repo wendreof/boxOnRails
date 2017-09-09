@@ -1,9 +1,9 @@
 echo "Getting Started Installing from the Ruby on Rails Development Environment with RVM"
 
 echo "*------------UPDATE ------------*"
-sudo apt-get update
+sudo apt-get update && sudo apt-get -y upgrade
 
-echo "--- Configuring MySQL Password---"
+echo "------- Configuring MySQL Password ---------"
 DEFAULTPASS="root"
 sudo debconf-set-selections <<EOF
 mysql-server	    mysql-server/root_password password $DEFAULTPASS
@@ -31,7 +31,25 @@ sudo apt-get update
 apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 
+echo "*------------Installing Heroku CLI ------------*"
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
+echo "*------------Installing Redis NoSQL ------------*"
+sudo apt-get install -y build-essential tcl
+cd /tmp
+curl -O http://download.redis.io/redis-stable.tar.gz
+tar xzvf redis-stable.tar.gz
+cd redis-stable
+make
+sudo make install
+cd ..
+cd ..
+sudo apt-get install -y redis-server
+sudo systemctl restart redis-server.service
+#sudo systemctl enable redis-server.service #boot
+
+
+#old
 
 
 #echo "--- instalando pacotes essenciais ---"

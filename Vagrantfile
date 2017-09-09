@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "projects/", "/var/www", owner: "www-data", group: "www-data", mount_options: ['dmode=777','fmode=666']
 
   config.vm.provider "virtualbox" do |machine| 
-    machine.memory = 1024               ####################
+    machine.memory = 512               ####################
     machine.cpus = 1                    ##Set as you want###
     machine.name = "box-on-rails"       ###################
   end

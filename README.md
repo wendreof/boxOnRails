@@ -10,8 +10,10 @@
 - Ruby 2.4.1 and 2.3.4 
 - Rails 5.1.3
 - MySql 5.7.19
+- Redis 4.0.1
 - Nodejs 8.4.0
 - Git 2.7.4
+- Heroku-CLI 6.14.20-737bba7
 - Docker 17.06.1-ce
 
 #Step-by-step
