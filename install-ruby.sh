@@ -19,5 +19,5 @@ gem install mysql2
 echo "*------------------- Upgrade---------------*"
 sudo apt-get -y upgrade && sudp apt-get autoremove && sudo apt-get autoremove
 
-echo "*--------------- Your Environment It Work's ---------------*"
+echo "*--------------- Ruby Installed! ---------------*"
 
