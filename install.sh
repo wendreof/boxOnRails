@@ -1,6 +1,6 @@
 echo "Getting Started Installing from the Ruby on Rails Development Environment with RVM"
 
-echo "*------------UPDATE ------------*"
+echo "*------------apt-get UPDATE ------------*"
 sudo apt-get update && sudo apt-get -y upgrade
 
 echo "------- Configuring MySQL Password ---------"
@@ -18,7 +18,7 @@ echo "*------------ Installing nodejs ------------*"
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-echo "*------------Installing MySQL ------------*"
+echo "*------------Installing MySQL server------------*"
 sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
 
 echo "*------------Installing Git ------------*"
@@ -34,7 +34,7 @@ sudo apt-get install -y docker-ce
 echo "*------------Installing Heroku CLI ------------*"
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
-echo "*------------Installing Redis NoSQL ------------*"
+echo "*------------Installing Redis ------------*"
 sudo apt-get install -y build-essential tcl
 cd /tmp
 curl -O http://download.redis.io/redis-stable.tar.gz
@@ -51,7 +51,6 @@ sudo systemctl restart redis-server.service
 #old
 #echo "--- instalando pacotes essenciais ---"
 #sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
-
 #echo "--- Instalando RVM, setando Ruby 2.4.1 como default ---"
 #sudo apt-get install -y libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 #gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -59,10 +58,8 @@ sudo systemctl restart redis-server.service
 #source ~/.rvm/scripts/rvm
 #rvm install 2.4.1
 #rvm use 2.4.1 --default
-
 #echo "*------------ Instalando bundler ------------*"
 #gem install bundler
-
 #echo "--- instalando RAILS 5.1.3 ---"
 #gem install rails -v 5.1.3 
 

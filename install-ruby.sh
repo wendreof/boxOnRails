@@ -16,8 +16,7 @@ echo "*-------------------Installing RUBY---------------*"
 echo "*------------- Installing MySQL Gem---------------*"
 gem install mysql2
 
-echo "*------------------- Upgrade---------------*"
+echo "*------------------- apt-get Upgrade e Remove ---------------*"
 sudo apt-get -y upgrade && sudp apt-get autoremove && sudo apt-get autoremove
 
-echo "*--------------- Ruby Installed! ---------------*"
 
