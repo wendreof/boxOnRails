@@ -1,5 +1,8 @@
 echo "Getting Started Installing from the Ruby on Rails Development Environment with RVM"
 
+echo "*------------Installing essentials packages ------------*"
+sudo apt-get install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
 echo "*------------apt-get UPDATE ------------*"
 sudo apt-get update && sudo apt-get -y upgrade
 
@@ -47,21 +50,9 @@ cd ..
 sudo apt-get install -y redis-server
 sudo systemctl restart redis-server.service
 
-#sudo systemctl enable redis-server.service #boot
-#old
-#echo "--- instalando pacotes essenciais ---"
-#sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
-#echo "--- Instalando RVM, setando Ruby 2.4.1 como default ---"
-#sudo apt-get install -y libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-#gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-#curl -sSL https://get.rvm.io | bash -s stable
-#source ~/.rvm/scripts/rvm
-#rvm install 2.4.1
-#rvm use 2.4.1 --default
-#echo "*------------ Instalando bundler ------------*"
-#gem install bundler
-#echo "--- instalando RAILS 5.1.3 ---"
-#gem install rails -v 5.1.3 
+echo "*------------apt-get UPDATE again ... ------------*"
+sudo apt-get update && sudo apt-get -y upgrade
+
 
 
 
