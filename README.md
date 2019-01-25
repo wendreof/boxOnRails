@@ -42,11 +42,11 @@ $ cd /var/www
 $ rails new myapp -d mysql
 ```
 
-A web server is available at http://localhost:3000
+Now a web server is available at http://localhost:3000
 
 (The default password for all services is root).
 
-Basic Usage
+**Basic Usage**
 
 ```shel
 $ vagrant up
