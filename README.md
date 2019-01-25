@@ -1,9 +1,9 @@
 # Rails Environment with Vagrant
 
 **Requirements**
-- [VirtualBox] (https://www.virtualbox.org/)
-- [Git]  (http://git-scm.com)
-- [Vagrant] (http://www.vagrantup.com/)
+- [VirtualBox](https://www.virtualbox.org/)
+- [Git](http://git-scm.com)
+- [Vagrant](http://www.vagrantup.com/)
 
 **Includes**
 - RVM 1.29.2
