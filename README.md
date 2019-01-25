@@ -1,4 +1,4 @@
-#Rails Environment with Vagrant
+# Rails Environment with Vagrant
 
 **Requirements**
 - VirtualBox https://www.virtualbox.org/
