@@ -18,14 +18,16 @@
 
 **Step-by-step**
 ```shel
-$ git clone https://github.com/wendreof/box-on-rails
+1.
+ $ git clone https://github.com/wendreof/box-on-rails
 ```
+2.
 ```shel
-$ cd box-on-rails/
+ $ cd box-on-rails/
 ```
-
+3.
 ```shel
-$ vagrant up
+ $ vagrant up
 ```
 
 After this 'vagrant up' command, Vagrant will be responsible for downloading the operating system configuring a virtual machine in VirtualBox and later downloading, installing and configuring all the packages in the 'setup.sh' script. ! The first time really is a bit more time consuming.
