@@ -18,15 +18,15 @@
 
 **Step-by-step**
 
-1.```shel
+```shel
  $ git clone https://github.com/wendreof/box-on-rails
 ```
 
-2.```shel
+```shel
  $ cd box-on-rails/
 ```
 
-3.```shel
+```shel
  $ vagrant up
 ```
 
