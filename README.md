@@ -16,7 +16,7 @@
 - Heroku-CLI 6.14.20-737bba7
 - Docker 17.06.1-ce
 
-**Step-by-step**
+**Step-by-step** (on your bash)
 
 ```shel
  $ git clone https://github.com/wendreof/box-on-rails
