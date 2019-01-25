@@ -1,11 +1,11 @@
-Rails Environment with Vagrant
+#Rails Environment with Vagrant
 
-Requirements
+**Requirements**
 - VirtualBox https://www.virtualbox.org/
 - Git  http://git-scm.com 
 - Vagrant http://www.vagrantup.com/
 
-Includes
+**Includes**
 - RVM 1.29.2
 - Ruby 2.4.1 and 2.3.4 
 - Rails 5.1.3
@@ -16,7 +16,7 @@ Includes
 - Heroku-CLI 6.14.20-737bba7
 - Docker 17.06.1-ce
 
-Step-by-step
+**Step-by-step**
 ```shel
 $ git clone https://github.com/wendreof/box-on-rails
 ```
