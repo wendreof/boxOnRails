@@ -17,16 +17,16 @@
 - Docker 17.06.1-ce
 
 **Step-by-step**
-```shel
-1.
+
+1.```shel
  $ git clone https://github.com/wendreof/box-on-rails
 ```
-2.
-```shel
+
+2.```shel
  $ cd box-on-rails/
 ```
-3.
-```shel
+
+3.```shel
  $ vagrant up
 ```
 
